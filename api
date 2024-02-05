@@ -1,1 +1,11 @@
+import requests
 
+city = "India"  # Replace with your desired city
+api_key = "f1934111a0cac16f862259e4dbc474fb"  # Replace with your actual API key
+
+api_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
+
+response = requests.get(api_url)
+data = response.text
+
+print(data)
